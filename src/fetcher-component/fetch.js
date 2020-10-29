@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Card from 'react-bootstrap/Card';
+import FetchRender from './presentational'
+
 
 /**
  * Fetches an API request from NASA's APOD
@@ -102,27 +101,8 @@ export default class Fetch extends Component {
   }
 
   render () {
-    if (!this.state.isLoaded) {
-      return (
-        <Container ><h1>Loading...</h1></Container>
-      )
-    } else {
-      return (
-        <Container>
-          <h1>NASA Astronomy Picture Of the Day</h1>
-          <Card className="mx-auto" style={{ width: '36rem' }}>
-            <Card.Img alt="nasa-apod" variant="top" src={ this.state.url } />
-            <Card.Body>
-              <p><strong> { this.state.title }</strong></p>
-              { this.state.author && <p><small>Author: { this.state.author }</small></p> }
-              { this.state.date && <p><small>Date: { this.state.date }</small></p> }
-              <p><em>{ this.state.description }</em></p>
-              <p><Button className="mr-2" variant="primary" onClick={ this.handleClick }>Random APOD</Button>
-              <Button href={ this.state.hdurl } target="_blank" variant="primary">View HD version</Button></p>
-            </Card.Body>
-          </Card>
-        </Container>
-      )
-    }
+    return (
+      <FetchRender data={this.state} handle={this.handleClick} />
+    )
   }
 }

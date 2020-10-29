@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Fetch  from './Fetch';
+import Fetch  from './fetcher-component/fetch';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
