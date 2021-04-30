@@ -24,7 +24,7 @@ const server = setupServer(
 beforeAll(() => server.listen());
 afterAll(() => server.close());
 
-describe("fetch component", () => {
+describe("mocking API calls", () => {
   test("if image has proper src attribute", async () => {
     render(<Fetch />);
 
