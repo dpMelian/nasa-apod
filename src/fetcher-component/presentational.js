@@ -27,7 +27,7 @@ export default class FetchRender extends Component {
             </Card>
           </Container>
 
-          <footer className="footer p-3 mt-3 mb-3 bg-light">
+          <footer className="footer p-3 mt-3 bg-light">
             <Container>
               <span>Created using <a href="https://reactjs.org/">React </a>
                 by <a href="https://github.com/dpMelian">dpMelian</a> using
